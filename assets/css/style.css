@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+  text-align: center;
+  margin: 0px;
+}
+
+body {
+	background-image:url(../images/background.jpg);
+	background-size: 100%;
+	color: black;
+}
+
+h1 {
+	padding: 30px;
+	margin-top: 25px;
+	margin-left: 150px;
+	margin-right: 150px;
+	text-align: center;
+	font-size: 40px;
+	background: white;
+	font-family: 'Fredericka the Great', cursive;
+}
+
+h4 {
+	text-align: center;
+	font-size: 30px;
+	background: white;
+	font-family: 'Fredericka the Great', cursive;
+	margin-bottom: 20px;
+}
+
+#dad-buttons {
+	margin-top: 25px;
+	margin-left: 150px;
+	margin-right: 150px;
+	padding: 30px;
+	background: white;
+}
+
+#dad-form {
+	margin-bottom: 25px;
+	margin-left: 150px;
+	margin-right: 150px;
+	padding: 30px;
+	background: white;
+	font-family: 'Averia Sans Libre', cursive;
+}
+
+#dads {
+	margin-top: 25px;
+	margin-left: 150px;
+	margin-right: 150px;
+	padding: 30px;
+	background: white;
+	font-family: 'Averia Sans Libre', cursive;
+	font-size: 20px;
+}
+
+button, #add-dad {
+	background: gray;
+	color: white;
+	font-family: 'Averia Sans Libre', cursive;
+	margin-right: 10px;
+	font-size: 15px;
+}
+
+button:hover, #add-dad:hover {
+	background: #93b5b7;
+	outline: 0;
+}
+
+button:active, #add-dad:active {
+	background: black;
+	outline: 0;
+}
+
+button:focus, #add-dad:focus {
+	outline: 0;
+}
