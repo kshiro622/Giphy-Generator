@@ -46,14 +46,24 @@ h4 {
 	font-family: 'Averia Sans Libre', cursive;
 }
 
-#dads {
+#dad-gifs-title {
 	margin-top: 25px;
 	margin-left: 150px;
 	margin-right: 150px;
-	padding: 30px;
+	padding-top: 30px;
+	padding-bottom: 10px;
 	background: white;
 	font-family: 'Averia Sans Libre', cursive;
 	font-size: 20px;
+}
+
+#dads {
+	margin-left: 150px;
+	margin-right: 150px;
+	padding: 20px;
+	background: white;
+	overflow: auto;
+	width: 975px;
 }
 
 button, #add-dad {
@@ -76,4 +86,15 @@ button:active, #add-dad:active {
 
 button:focus, #add-dad:focus {
 	outline: 0;
+}
+
+.rating {
+	height: 20px;
+}
+
+.rating-div {
+	font-family: 'Averia Sans Libre', cursive;
+	float: left;
+	margin-left: 10px;
+	margin-top: 10px;
 }
