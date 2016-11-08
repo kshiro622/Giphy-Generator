@@ -12,12 +12,17 @@ $(document).ready(function () {
             url: queryURL,
             method: 'GET'
         }).done(function (response) {
+            console.log(response);
             for (var j = 0; j < 10; j++) {
                 var dadGif = $('<img>');
                 var ratingDadsDiv = $('<div>');
                 var rating = $('<div>');
-                $(dadGif).attr('src', response.data[j].images.fixed_height.url);
+                $(dadGif).attr('src', response.data[j].images.original_still.url);
                 $(dadGif).attr('height', '150px');
+                $(dadGif).addClass('changeGifState');
+                $(dadGif).attr('data-state', 'still');
+                $(dadGif).attr('data-still', response.data[j].images.original_still.url);
+                $(dadGif).attr('data-animate', response.data[j].images.fixed_height.url);
                 $(rating).html('Rating: ' + response.data[j].rating);
                 $(rating).addClass('rating');
                 $(ratingDadsDiv).addClass('rating-div');
@@ -26,6 +31,19 @@ $(document).ready(function () {
                 $('#dads').append(ratingDadsDiv);
             }
         });
+    });
+    //changes giphy between still and animated
+    $(document.body).on('click', '.changeGifState', function () {
+        var state = $(this).data('state');
+        var animatedGif = $(this).data('animate');
+        var stillGif = $(this).data('still');
+        if (state === 'still') {
+            $(this).attr('src', animatedGif);
+            $(this).data('state', 'animate');
+        } else {
+            $(this).attr('src', stillGif);
+            $(this).data('state', 'still');
+        }
     });
     //adds a new button with user input
     $('#add-dad').on('click', function () {
