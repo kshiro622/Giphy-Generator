@@ -1,6 +1,6 @@
 $(document).ready(function () {
     //variables
-    var topics = ['Phil Dunphy', 'Ray Barone', 'Mufasa', 'Michael Bluth', 'Red Foreman', 'Danny Tanner'];
+    var topics = ['Phil Dunphy', 'Michael Bluth', 'Danny Tanner', 'Mrs. Doubtfire', 'Mufasa', 'George Banks', 'Ray Barone'];
     //renders buttons the first time
     renderButtons();
     //gets and displays giphy when button is clicked
@@ -53,7 +53,7 @@ $(document).ready(function () {
         renderButtons();
         return false;
     });
-    //functions
+    //makes buttons and adds them to page
     function renderButtons() {
         $('#dad-buttons').empty();
         for (var i = 0; i < topics.length; i++) {
